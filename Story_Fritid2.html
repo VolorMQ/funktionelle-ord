@@ -1,0 +1,82 @@
+
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            input.blank { font-size: 1em; padding: 2px 5px; margin: 0 2px; border: 2px solid #ccc; border-radius: 4px; }
+            input.correct { border-color: green; background-color: #d4ffd4; }
+            input.incorrect { border-color: red; background-color: #ffd4d4; }
+            button { margin-top: 20px; font-size: 1em; padding: 10px 20px; margin-right: 10px; cursor: pointer; }
+            .speak-btn { font-size: 1em; padding: 2px 6px; margin-left: 5px; }
+            .speak-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+            #answers { margin-top: 15px; font-style: italic; display: none; }
+            span { display: block; margin-bottom: 10px; }
+            label { display: block; margin-top: 20px; font-weight: bold; }
+            input[type=range] { width: 200px; margin-top: 5px; }
+            #rateValue { font-weight: normal; margin-left: 10px; }
+        </style>
+    </head>
+    <body>
+        <p><span>Fritid har været <input type="text" class="blank" data-answer="en" size="2" /> del af menneskets liv siden oldtiden. <button class="speak-btn" data-text="Fritid har været en del af menneskets liv siden oldtiden." title="Afspil sætning" disabled>🔊</button></span> <span>I de tidlige samfund var fritiden begrænset til perioder <input type="text" class="blank" data-answer="med" size="3" /> overflod i fødevarerne og tider uden krigsfare. <button class="speak-btn" data-text="I de tidlige samfund var fritiden begrænset til perioder med overflod i fødevarerne og tider uden krigsfare." title="Afspil sætning" disabled>🔊</button></span> <span>Mennesker brugte disse perioder til at udforske, skabe kunst og underholde sig selv. <button class="speak-btn" data-text="Mennesker brugte disse perioder til at udforske, skabe kunst og underholde sig selv." title="Afspil sætning" disabled>🔊</button></span> <span>I middelalderen ændrede forholdene sig. <button class="speak-btn" data-text="I middelalderen ændrede forholdene sig." title="Afspil sætning" disabled>🔊</button></span> <span>Fritiden blev begrænset af religiøse pligter og sociale normer. <button class="speak-btn" data-text="Fritiden blev begrænset af religiøse pligter og sociale normer." title="Afspil sætning" disabled>🔊</button></span> <span>Folk havde ikke så meget tid tilbage <input type="text" class="blank" data-answer="efter" size="5" /> arbejdet på landet eller i byerne, men de brugte den fritid de havde til at dyrke hobbyer som musik, dans og håndværk. <button class="speak-btn" data-text="Folk havde ikke så meget tid tilbage efter arbejdet på landet eller i byerne, men de brugte den fritid de havde til at dyrke hobbyer som musik, dans og håndværk." title="Afspil sætning" disabled>🔊</button></span> <span>I renæssancen og barokken ændrede forholdene sig igen. <button class="speak-btn" data-text="I renæssancen og barokken ændrede forholdene sig igen." title="Afspil sætning" disabled>🔊</button></span> <span>Fritiden blev mere individueliseret og folk begyndte at se på livet som <input type="text" class="blank" data-answer="en" size="2" /> chance for personlig udvikling og underholdning. <button class="speak-btn" data-text="Fritiden blev mere individueliseret og folk begyndte at se på livet som en chance for personlig udvikling og underholdning." title="Afspil sætning" disabled>🔊</button></span> <span>De oprettede teatre, koncerthaller og biblioteker, hvor de kunne nyde kunst og kultur. <button class="speak-btn" data-text="De oprettede teatre, koncerthaller og biblioteker, hvor de kunne nyde kunst og kultur." title="Afspil sætning" disabled>🔊</button></span> <span>I 1800-tallet ændrede industrialiseringen fritiden radikalt. <button class="speak-btn" data-text="I 1800-tallet ændrede industrialiseringen fritiden radikalt." title="Afspil sætning" disabled>🔊</button></span> <span>Folk flyttede fra landet til byerne for at arbejde i fabrikkerne og fik mere tid over til deres egne interesser. <button class="speak-btn" data-text="Folk flyttede fra landet til byerne for at arbejde i fabrikkerne og fik mere tid over til deres egne interesser." title="Afspil sætning" disabled>🔊</button></span> <span>De oprettede foreninger, klubber og organisationer, hvor de kunne deltage i sport, kunst og politik. <button class="speak-btn" data-text="De oprettede foreninger, klubber og organisationer, hvor de kunne deltage i sport, kunst og politik." title="Afspil sætning" disabled>🔊</button></span> <span>I 1900-tallet fortsatte industrialiseringen og fritiden blev stadig mere individualiseret. <button class="speak-btn" data-text="I 1900-tallet fortsatte industrialiseringen og fritiden blev stadig mere individualiseret." title="Afspil sætning" disabled>🔊</button></span> <span>Folk begyndte at se på livet som <input type="text" class="blank" data-answer="en" size="2" /> chance for personlig udvikling og underholdning. <button class="speak-btn" data-text="Folk begyndte at se på livet som en chance for personlig udvikling og underholdning." title="Afspil sætning" disabled>🔊</button></span> <span>De oprettede radio- og tv-stationer, hvor de kunne nyde musik, film og andre former for underholdning. <button class="speak-btn" data-text="De oprettede radio- og tv-stationer, hvor de kunne nyde musik, film og andre former for underholdning." title="Afspil sætning" disabled>🔊</button></span> <span>I dag er fritiden mere diversificeret end nogensinde før. <button class="speak-btn" data-text="I dag er fritiden mere diversificeret end nogensinde før." title="Afspil sætning" disabled>🔊</button></span> <span>Folk har flere muligheder til at udforske, skabe kunst og underholde sig selv. <button class="speak-btn" data-text="Folk har flere muligheder til at udforske, skabe kunst og underholde sig selv." title="Afspil sætning" disabled>🔊</button></span> <span>De kan deltage i online-komuniteter, hvor de kan dele deres interesser <input type="text" class="blank" data-answer="med" size="3" /> andre over hele verden. <button class="speak-btn" data-text="De kan deltage i online-komuniteter, hvor de kan dele deres interesser med andre over hele verden." title="Afspil sætning" disabled>🔊</button></span> <span>I slutningen af denne historie <input type="text" class="blank" data-answer="om" size="2" /> fritid er det klart, at menneskets forhold til fritiden har ændret sig meget gennem tiderne. <button class="speak-btn" data-text="I slutningen af denne historie om fritid er det klart, at menneskets forhold til fritiden har ændret sig meget gennem tiderne." title="Afspil sætning" disabled>🔊</button></span> <span>Fra begrænsede perioder i oldtiden til den moderne tid, hvor vi har flere muligheder end nogensinde før. <button class="speak-btn" data-text="Fra begrænsede perioder i oldtiden til den moderne tid, hvor vi har flere muligheder end nogensinde før." title="Afspil sætning" disabled>🔊</button></span> <span>Fritiden er <input type="text" class="blank" data-answer="en" size="2" /> del af <input type="text" class="blank" data-answer="vores" size="5" /> liv og giver os mulighed for at udforske, skabe kunst og underholde sig selv. <button class="speak-btn" data-text="Fritiden er en del af vores liv og giver os mulighed for at udforske, skabe kunst og underholde sig selv." title="Afspil sætning" disabled>🔊</button></span></p>
+        <button onclick="checkAnswers()">Tjek svar</button>
+        <button onclick="showAnswers()">Vis ord, der blev fjernet</button>
+        <div id="answers"><strong>Ord til udfyldning:</strong> <strong>en</strong>, <strong>om</strong>, <strong>vores</strong>, <strong>efter</strong>, <strong>med</strong></div>
+
+        <label for="rate">Hastighed (speed): <span id="rateValue">1.0</span></label>
+        <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+
+        <script>
+            function checkAnswers() {
+                let inputs = document.querySelectorAll('input.blank');
+                let allCorrect = true;
+                inputs.forEach(input => {
+                    let answer = input.dataset.answer.toLowerCase();
+                    let user = input.value.trim().toLowerCase();
+                    if(user === answer) {
+                        input.classList.add('correct');
+                        input.classList.remove('incorrect');
+                    } else {
+                        input.classList.add('incorrect');
+                        input.classList.remove('correct');
+                        allCorrect = false;
+                    }
+                });
+                document.querySelectorAll('.speak-btn').forEach(btn => {
+                    btn.disabled = !allCorrect;
+                });
+            }
+
+            function showAnswers() {
+                document.getElementById('answers').style.display = 'block';
+            }
+
+            function speak(text) {
+                if (!('speechSynthesis' in window)) {
+                    alert("Din browser understøtter ikke tale-syntese.");
+                    return;
+                }
+                const rateInput = document.getElementById('rate');
+                const rate = parseFloat(rateInput.value);
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'da-DK';
+                utterance.rate = rate;
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(utterance);
+            }
+
+            document.getElementById('rate').addEventListener('input', function() {
+                document.getElementById('rateValue').textContent = this.value;
+            });
+
+            document.querySelectorAll('.speak-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const text = button.dataset.text;
+                    speak(text);
+                });
+            });        
+        </script>
+    </body>
+    </html>
+    

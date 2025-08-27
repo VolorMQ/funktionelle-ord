@@ -1,0 +1,82 @@
+
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            input.blank { font-size: 1em; padding: 2px 5px; margin: 0 2px; border: 2px solid #ccc; border-radius: 4px; }
+            input.correct { border-color: green; background-color: #d4ffd4; }
+            input.incorrect { border-color: red; background-color: #ffd4d4; }
+            button { margin-top: 20px; font-size: 1em; padding: 10px 20px; margin-right: 10px; cursor: pointer; }
+            .speak-btn { font-size: 1em; padding: 2px 6px; margin-left: 5px; }
+            .speak-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+            #answers { margin-top: 15px; font-style: italic; display: none; }
+            span { display: block; margin-bottom: 10px; }
+            label { display: block; margin-top: 20px; font-weight: bold; }
+            input[type=range] { width: 200px; margin-top: 5px; }
+            #rateValue { font-weight: normal; margin-left: 10px; }
+        </style>
+    </head>
+    <body>
+        <p><span>Fritiden er en del af vores liv, som vi alle har brug for at udfylde med aktiviteter, der giver os glæde og nydelse. <button class="speak-btn" data-text="Fritiden er en del af vores liv, som vi alle har brug for at udfylde med aktiviteter, der giver os glæde og nydelse." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg husker min fynske bedstemor, som altid havde en masse planer omkring <input type="text" class="blank" data-answer="sin" size="3" /> fritid. <button class="speak-btn" data-text="Jeg husker min fynske bedstemor, som altid havde en masse planer omkring sin fritid." title="Afspil sætning" disabled>🔊</button></span> <span>Hun var en kvinde, der elskede at være <input type="text" class="blank" data-answer="i" size="1" /> naturen, og hun havde altid et <input type="text" class="blank" data-answer="eller" size="5" /> andet projekt på gang. <button class="speak-btn" data-text="Hun var en kvinde, der elskede at være i naturen, og hun havde altid et eller andet projekt på gang." title="Afspil sætning" disabled>🔊</button></span> <span>En af hendes favoritter var at tage lange vandreture langs kysten. <button class="speak-btn" data-text="En af hendes favoritter var at tage lange vandreture langs kysten." title="Afspil sætning" disabled>🔊</button></span> <span>Hun ville gerne se de smukke landskaber og dyreliv, som Fyn har så meget af. <button class="speak-btn" data-text="Hun ville gerne se de smukke landskaber og dyreliv, som Fyn har så meget af." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg husker en dag, hvor vi gik <input type="text" class="blank" data-answer="til" size="3" /> fods fra Svendborg <input type="text" class="blank" data-answer="til" size="3" /> Kerteminde. <button class="speak-btn" data-text="Jeg husker en dag, hvor vi gik til fods fra Svendborg til Kerteminde." title="Afspil sætning" disabled>🔊</button></span> <span>Vi tog os tidlig op på morgenen, da solen var <input type="text" class="blank" data-answer="i" size="1" /> øst, og begyndte vores tur langs kysten. <button class="speak-btn" data-text="Vi tog os tidlig op på morgenen, da solen var i øst, og begyndte vores tur langs kysten." title="Afspil sætning" disabled>🔊</button></span> <span>Bedstemor fortalte mig om alle de forskellige fuglearter, som vi så, og hun viste mig hvor man kunne finde de smukkeste steder at se <input type="text" class="blank" data-answer="dem" size="3" />. <button class="speak-btn" data-text="Bedstemor fortalte mig om alle de forskellige fuglearter, som vi så, og hun viste mig hvor man kunne finde de smukkeste steder at se dem." title="Afspil sætning" disabled>🔊</button></span> <span>Efter en lang dag på fods var vi tilbage <input type="text" class="blank" data-answer="i" size="1" /> Svendborg, trætte men glade for vores tur. <button class="speak-btn" data-text="Efter en lang dag på fods var vi tilbage i Svendborg, trætte men glade for vores tur." title="Afspil sætning" disabled>🔊</button></span> <span>Bedstemor sagde, at det havde været den bedste dag nogensinde, og jeg troede hende. <button class="speak-btn" data-text="Bedstemor sagde, at det havde været den bedste dag nogensinde, og jeg troede hende." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg husker stadig de smukke billeder fra denne dag, som er bundet sammen med min fynske bedstefar. <button class="speak-btn" data-text="Jeg husker stadig de smukke billeder fra denne dag, som er bundet sammen med min fynske bedstefar." title="Afspil sætning" disabled>🔊</button></span> <span>Men fritiden kan også være en tid <input type="text" class="blank" data-answer="til" size="3" /> at udforske nye ting. <button class="speak-btn" data-text="Men fritiden kan også være en tid til at udforske nye ting." title="Afspil sætning" disabled>🔊</button></span> <span>Min veninde, Anna, elsker at lære nye sprog og har altid et <input type="text" class="blank" data-answer="eller" size="5" /> andet projekt på gang. <button class="speak-btn" data-text="Min veninde, Anna, elsker at lære nye sprog og har altid et eller andet projekt på gang." title="Afspil sætning" disabled>🔊</button></span> <span>Hun har studeret flere sprog <input type="text" class="blank" data-answer="i" size="1" /> <input type="text" class="blank" data-answer="sin" size="3" /> ungdom, men nu er hun begyndt at lære sig det japanske skriftsystem. <button class="speak-btn" data-text="Hun har studeret flere sprog i sin ungdom, men nu er hun begyndt at lære sig det japanske skriftsystem." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg husker en dag, hvor vi sad sammen og prøvede at læse de første ordene. <button class="speak-btn" data-text="Jeg husker en dag, hvor vi sad sammen og prøvede at læse de første ordene." title="Afspil sætning" disabled>🔊</button></span> <span>Det var svært, men Anna var fast besluttet på at komme <input type="text" class="blank" data-answer="til" size="3" /> at forstå det. <button class="speak-btn" data-text="Det var svært, men Anna var fast besluttet på at komme til at forstå det." title="Afspil sætning" disabled>🔊</button></span> <span>Efter flere uger af øvelser begyndte hun at se resultaterne. <button class="speak-btn" data-text="Efter flere uger af øvelser begyndte hun at se resultaterne." title="Afspil sætning" disabled>🔊</button></span> <span>Hun kunne læse enkelte ord og selv skrive nogle simple sætninger. <button class="speak-btn" data-text="Hun kunne læse enkelte ord og selv skrive nogle simple sætninger." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg var så begejstret over hendes fremskridt, og jeg vidste, at hun ville fortsætte med at udforske det japanske sprog. <button class="speak-btn" data-text="Jeg var så begejstret over hendes fremskridt, og jeg vidste, at hun ville fortsætte med at udforske det japanske sprog." title="Afspil sætning" disabled>🔊</button></span> <span>Fritiden er derfor ikke bare om at nyde sig selv <input type="text" class="blank" data-answer="eller" size="5" /> være <input type="text" class="blank" data-answer="i" size="1" /> naturen, men også om at udforske nye ting og udvikle sine evner. <button class="speak-btn" data-text="Fritiden er derfor ikke bare om at nyde sig selv eller være i naturen, men også om at udforske nye ting og udvikle sine evner." title="Afspil sætning" disabled>🔊</button></span> <span>Det kan være en tid <input type="text" class="blank" data-answer="til" size="3" /> at lære noget nyt, prøve sig frem på et nyt instrument <input type="text" class="blank" data-answer="eller" size="5" /> skabe kunst. <button class="speak-btn" data-text="Det kan være en tid til at lære noget nyt, prøve sig frem på et nyt instrument eller skabe kunst." title="Afspil sætning" disabled>🔊</button></span> <span>Fritiden er en del af vores liv, som vi alle har brug for at udfylde med aktiviteter, der giver os glæde og nydelse. <button class="speak-btn" data-text="Fritiden er en del af vores liv, som vi alle har brug for at udfylde med aktiviteter, der giver os glæde og nydelse." title="Afspil sætning" disabled>🔊</button></span> <span><input type="text" class="blank" data-answer="i" size="1" /> slutningen af denne fortælling kan man se, hvordan fritiden kan være en tid <input type="text" class="blank" data-answer="til" size="3" /> både at nyde sig selv og udvikle sine evner. <button class="speak-btn" data-text="I slutningen af denne fortælling kan man se, hvordan fritiden kan være en tid til både at nyde sig selv og udvikle sine evner." title="Afspil sætning" disabled>🔊</button></span> <span>Bedstemor elskede at være <input type="text" class="blank" data-answer="i" size="1" /> naturen, mens Anna elsker at lære nye sprog. <button class="speak-btn" data-text="Bedstemor elskede at være i naturen, mens Anna elsker at lære nye sprog." title="Afspil sætning" disabled>🔊</button></span> <span>Begge har brugt deres fritid på ting, som giver <input type="text" class="blank" data-answer="dem" size="3" /> glæde og nydelse. <button class="speak-btn" data-text="Begge har brugt deres fritid på ting, som giver dem glæde og nydelse." title="Afspil sætning" disabled>🔊</button></span> <span>Fritiden er en del af vores liv, som vi alle har brug for at udfylde med aktiviteter, der giver os glæde og nydelse. <button class="speak-btn" data-text="Fritiden er en del af vores liv, som vi alle har brug for at udfylde med aktiviteter, der giver os glæde og nydelse." title="Afspil sætning" disabled>🔊</button></span></p>
+        <button onclick="checkAnswers()">Tjek svar</button>
+        <button onclick="showAnswers()">Vis ord, der blev fjernet</button>
+        <div id="answers"><strong>Ord til udfyldning:</strong> <strong>dem</strong>, <strong>til</strong>, <strong>i</strong>, <strong>eller</strong>, <strong>sin</strong></div>
+
+        <label for="rate">Hastighed (speed): <span id="rateValue">1.0</span></label>
+        <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+
+        <script>
+            function checkAnswers() {
+                let inputs = document.querySelectorAll('input.blank');
+                let allCorrect = true;
+                inputs.forEach(input => {
+                    let answer = input.dataset.answer.toLowerCase();
+                    let user = input.value.trim().toLowerCase();
+                    if(user === answer) {
+                        input.classList.add('correct');
+                        input.classList.remove('incorrect');
+                    } else {
+                        input.classList.add('incorrect');
+                        input.classList.remove('correct');
+                        allCorrect = false;
+                    }
+                });
+                document.querySelectorAll('.speak-btn').forEach(btn => {
+                    btn.disabled = !allCorrect;
+                });
+            }
+
+            function showAnswers() {
+                document.getElementById('answers').style.display = 'block';
+            }
+
+            function speak(text) {
+                if (!('speechSynthesis' in window)) {
+                    alert("Din browser understøtter ikke tale-syntese.");
+                    return;
+                }
+                const rateInput = document.getElementById('rate');
+                const rate = parseFloat(rateInput.value);
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'da-DK';
+                utterance.rate = rate;
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(utterance);
+            }
+
+            document.getElementById('rate').addEventListener('input', function() {
+                document.getElementById('rateValue').textContent = this.value;
+            });
+
+            document.querySelectorAll('.speak-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const text = button.dataset.text;
+                    speak(text);
+                });
+            });        
+        </script>
+    </body>
+    </html>
+    
