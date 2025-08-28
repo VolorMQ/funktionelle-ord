@@ -1,0 +1,82 @@
+
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            input.blank { font-size: 1em; padding: 2px 5px; margin: 0 2px; border: 2px solid #ccc; border-radius: 4px; }
+            input.correct { border-color: green; background-color: #d4ffd4; }
+            input.incorrect { border-color: red; background-color: #ffd4d4; }
+            button { margin-top: 20px; font-size: 1em; padding: 10px 20px; margin-right: 10px; cursor: pointer; }
+            .speak-btn { font-size: 1em; padding: 2px 6px; margin-left: 5px; }
+            .speak-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+            #answers { margin-top: 15px; font-style: italic; display: none; }
+            span { display: block; margin-bottom: 10px; }
+            label { display: block; margin-top: 20px; font-weight: bold; }
+            input[type=range] { width: 200px; margin-top: 5px; }
+            #rateValue { font-weight: normal; margin-left: 10px; }
+        </style>
+    </head>
+    <body>
+        <p><span>Juleferien var en tid <input type="text" class="blank" data-answer="på" size="2" /> året, hvor jeg altid havde mest <input type="text" class="blank" data-answer="af" size="2" /> min fantasi fri. <button class="speak-btn" data-text="Juleferien var en tid på året, hvor jeg altid havde mest af min fantasi fri." title="Afspil sætning" disabled>🔊</button></span> <span>Som barn var det sommeren, der var den bedste tid til at lege udenfor med mine venner og familie. <button class="speak-btn" data-text="Som barn var det sommeren, der var den bedste tid til at lege udenfor med mine venner og familie." title="Afspil sætning" disabled>🔊</button></span> <span>Men da jeg blev ældre, begyndte juleferien at blive mit yndlingsophold. <button class="speak-btn" data-text="Men da jeg blev ældre, begyndte juleferien at blive mit yndlingsophold." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg husker en år, hvor min far havde bestilt et lille hytte i Skagen. <button class="speak-btn" data-text="Jeg husker en år, hvor min far havde bestilt et lille hytte i Skagen." title="Afspil sætning" disabled>🔊</button></span> <span><input type="text" class="blank" data-answer="vi" size="2" /> tog derop sammen som familie og boede dér i tre uger. <button class="speak-btn" data-text="Vi tog derop sammen som familie og boede dér i tre uger." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg var så glad for at være væk fra byen og have tid til at lege <input type="text" class="blank" data-answer="på" size="2" /> stranden med mine søskende. <button class="speak-btn" data-text="Jeg var så glad for at være væk fra byen og have tid til at lege på stranden med mine søskende." title="Afspil sætning" disabled>🔊</button></span> <span><input type="text" class="blank" data-answer="vi" size="2" /> byggede sandkastler, fandt skater og spillede fodbold hele dagen. <button class="speak-btn" data-text="Vi byggede sandkastler, fandt skater og spillede fodbold hele dagen." title="Afspil sætning" disabled>🔊</button></span> <span>Men det var ikke kun legetiden, der gjorde juleferien så specielt. <button class="speak-btn" data-text="Men det var ikke kun legetiden, der gjorde juleferien så specielt." title="Afspil sætning" disabled>🔊</button></span> <span>Min mor havde altid en stor pakke med julegodtyver til os børn, som <input type="text" class="blank" data-answer="vi" size="2" /> åbnede <input type="text" class="blank" data-answer="på" size="2" /> første aften i hytten. <button class="speak-btn" data-text="Min mor havde altid en stor pakke med julegodtyver til os børn, som vi åbnede på første aften i hytten." title="Afspil sætning" disabled>🔊</button></span> <span>Det var som om alle andre ting forsvandt og det eneste, der eksisterede, var glæden <input type="text" class="blank" data-answer="over" size="4" /> at have nye legetøj. <button class="speak-btn" data-text="Det var som om alle andre ting forsvandt og det eneste, der eksisterede, var glæden over at have nye legetøj." title="Afspil sætning" disabled>🔊</button></span> <span>Efter disse tre uger <input type="text" class="blank" data-answer="af" size="2" /> solskin og juleglæde vendte jeg hjem til byen med en stor sejrsmindelse i mit hjerte. <button class="speak-btn" data-text="Efter disse tre uger af solskin og juleglæde vendte jeg hjem til byen med en stor sejrsmindelse i mit hjerte." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg vidste, at jeg ville huske denne ferie for altid og allerede begyndte at planlægge næste års juleferie. <button class="speak-btn" data-text="Jeg vidste, at jeg ville huske denne ferie for altid og allerede begyndte at planlægge næste års juleferie." title="Afspil sætning" disabled>🔊</button></span> <span>I de følgende år fortsatte min familie traditionen med at tage <input type="text" class="blank" data-answer="på" size="2" /> juleferie til Skagen eller andre steder i landet. <button class="speak-btn" data-text="I de følgende år fortsatte min familie traditionen med at tage på juleferie til Skagen eller andre steder i landet." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg voksede op, men jeg beholdt mit yndlingophold og mine bedste minder fra disse ferier. <button class="speak-btn" data-text="Jeg voksede op, men jeg beholdt mit yndlingophold og mine bedste minder fra disse ferier." title="Afspil sætning" disabled>🔊</button></span> <span>Juleferien var for mig en tid, hvor alt var muligt og glæden <input type="text" class="blank" data-answer="over" size="4" /> at være sammen med familien og venner var det største. <button class="speak-btn" data-text="Juleferien var for mig en tid, hvor alt var muligt og glæden over at være sammen med familien og venner var det største." title="Afspil sætning" disabled>🔊</button></span> <span>Nu er jeg voksen og har min egen familie, men juleferien er stadig et specielt øjeblik i året. <button class="speak-btn" data-text="Nu er jeg voksen og har min egen familie, men juleferien er stadig et specielt øjeblik i året." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg tager mine børn <input type="text" class="blank" data-answer="på" size="2" /> ferie til en hytte <input type="text" class="blank" data-answer="ved" size="3" /> søen eller til stranden, hvor <input type="text" class="blank" data-answer="vi" size="2" /> leger og nyder hinandens selskab. <button class="speak-btn" data-text="Jeg tager mine børn på ferie til en hytte ved søen eller til stranden, hvor vi leger og nyder hinandens selskab." title="Afspil sætning" disabled>🔊</button></span> <span>Juleferien har altid været en tid for glæde og oplevelser, men nu er det også et øjeblik, hvor jeg kan dele mine egne minder med mine børn. <button class="speak-btn" data-text="Juleferien har altid været en tid for glæde og oplevelser, men nu er det også et øjeblik, hvor jeg kan dele mine egne minder med mine børn." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg håber, at de vil huske disse ferier sådan som jeg gjorde i min barndom. <button class="speak-btn" data-text="Jeg håber, at de vil huske disse ferier sådan som jeg gjorde i min barndom." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg håber, at de vil føle samme glæde og tryghed <input type="text" class="blank" data-answer="over" size="4" /> at være sammen med deres familie og venner <input type="text" class="blank" data-answer="på" size="2" /> juleferien. <button class="speak-btn" data-text="Jeg håber, at de vil føle samme glæde og tryghed over at være sammen med deres familie og venner på juleferien." title="Afspil sætning" disabled>🔊</button></span> <span>Og jeg håber, at de vil fortsætte traditionen med at tage <input type="text" class="blank" data-answer="på" size="2" /> ferie til en hytte eller stranden, hvor <input type="text" class="blank" data-answer="vi" size="2" /> kan nyde hinandens selskab og skabe nye minder. <button class="speak-btn" data-text="Og jeg håber, at de vil fortsætte traditionen med at tage på ferie til en hytte eller stranden, hvor vi kan nyde hinandens selskab og skabe nye minder." title="Afspil sætning" disabled>🔊</button></span> <span>Juleferien er for mig et symbol <input type="text" class="blank" data-answer="på" size="2" /> glæden <input type="text" class="blank" data-answer="over" size="4" /> at være sammen med andre. <button class="speak-btn" data-text="Juleferien er for mig et symbol på glæden over at være sammen med andre." title="Afspil sætning" disabled>🔊</button></span> <span>Det er en tid, hvor alt andet forsvinder og det eneste, der eksisterer, er glæden <input type="text" class="blank" data-answer="over" size="4" /> at opleve livet til fulde. <button class="speak-btn" data-text="Det er en tid, hvor alt andet forsvinder og det eneste, der eksisterer, er glæden over at opleve livet til fulde." title="Afspil sætning" disabled>🔊</button></span> <span>Og jeg håber, at mine børn vil føle samme ting i de år, som kommer. <button class="speak-btn" data-text="Og jeg håber, at mine børn vil føle samme ting i de år, som kommer." title="Afspil sætning" disabled>🔊</button></span></p>
+        <button onclick="checkAnswers()">Tjek svar</button>
+        <button onclick="showAnswers()">Vis ord, der blev fjernet</button>
+        <div id="answers"><strong>Ord til udfyldning:</strong> <strong>vi</strong>, <strong>på</strong>, <strong>over</strong>, <strong>ved</strong>, <strong>af</strong></div>
+
+        <label for="rate">Hastighed (speed): <span id="rateValue">1.0</span></label>
+        <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+
+        <script>
+            function checkAnswers() {
+                let inputs = document.querySelectorAll('input.blank');
+                let allCorrect = true;
+                inputs.forEach(input => {
+                    let answer = input.dataset.answer.toLowerCase();
+                    let user = input.value.trim().toLowerCase();
+                    if(user === answer) {
+                        input.classList.add('correct');
+                        input.classList.remove('incorrect');
+                    } else {
+                        input.classList.add('incorrect');
+                        input.classList.remove('correct');
+                        allCorrect = false;
+                    }
+                });
+                document.querySelectorAll('.speak-btn').forEach(btn => {
+                    btn.disabled = !allCorrect;
+                });
+            }
+
+            function showAnswers() {
+                document.getElementById('answers').style.display = 'block';
+            }
+
+            function speak(text) {
+                if (!('speechSynthesis' in window)) {
+                    alert("Din browser understøtter ikke tale-syntese.");
+                    return;
+                }
+                const rateInput = document.getElementById('rate');
+                const rate = parseFloat(rateInput.value);
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'da-DK';
+                utterance.rate = rate;
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(utterance);
+            }
+
+            document.getElementById('rate').addEventListener('input', function() {
+                document.getElementById('rateValue').textContent = this.value;
+            });
+
+            document.querySelectorAll('.speak-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const text = button.dataset.text;
+                    speak(text);
+                });
+            });        
+        </script>
+    </body>
+    </html>
+    

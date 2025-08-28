@@ -1,0 +1,82 @@
+
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            input.blank { font-size: 1em; padding: 2px 5px; margin: 0 2px; border: 2px solid #ccc; border-radius: 4px; }
+            input.correct { border-color: green; background-color: #d4ffd4; }
+            input.incorrect { border-color: red; background-color: #ffd4d4; }
+            button { margin-top: 20px; font-size: 1em; padding: 10px 20px; margin-right: 10px; cursor: pointer; }
+            .speak-btn { font-size: 1em; padding: 2px 6px; margin-left: 5px; }
+            .speak-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+            #answers { margin-top: 15px; font-style: italic; display: none; }
+            span { display: block; margin-bottom: 10px; }
+            label { display: block; margin-top: 20px; font-weight: bold; }
+            input[type=range] { width: 200px; margin-top: 5px; }
+            #rateValue { font-weight: normal; margin-left: 10px; }
+        </style>
+    </head>
+    <body>
+        <p><span>I Danmark har 'kartoffelferie' <input type="text" class="blank" data-answer="en" size="2" /> lang tradition <input type="text" class="blank" data-answer="og" size="2" /> er et populært tema i danske kulturarv. <button class="speak-btn" data-text="I Danmark har 'kartoffelferie' en lang tradition og er et populært tema i danske kulturarv." title="Afspil sætning" disabled>🔊</button></span> <span>Begrebet stammer fra 1700-tallet, hvor kartoflerne var <input type="text" class="blank" data-answer="en" size="2" /> ny fødevarer for de fleste danskere. <button class="speak-btn" data-text="Begrebet stammer fra 1700-tallet, hvor kartoflerne var en ny fødevarer for de fleste danskere." title="Afspil sætning" disabled>🔊</button></span> <span>I begyndelsen <input type="text" class="blank" data-answer="af" size="2" /> det 18. <button class="speak-btn" data-text="I begyndelsen af det 18." title="Afspil sætning" disabled>🔊</button></span> <span>århundrede blev kartoffelkulturen introduceret til Danmark fra Holland <input type="text" class="blank" data-answer="og" size="2" /> Tyskland. <button class="speak-btn" data-text="århundrede blev kartoffelkulturen introduceret til Danmark fra Holland og Tyskland." title="Afspil sætning" disabled>🔊</button></span> <span>Kartoflerne var et nyt fødevarer, <input type="text" class="blank" data-answer="der" size="3" /> kunne bruges som <input type="text" class="blank" data-answer="en" size="2" /> alternativ til andre kulinariske produkter som bønner <input type="text" class="blank" data-answer="og" size="2" /> ris. <button class="speak-btn" data-text="Kartoflerne var et nyt fødevarer, der kunne bruges som en alternativ til andre kulinariske produkter som bønner og ris." title="Afspil sætning" disabled>🔊</button></span> <span>Gennem 1700-tallet blev kartoffelproduktionen i Danmark stadig mere udbredt, <input type="text" class="blank" data-answer="og" size="2" /> kartoflerne blev <input type="text" class="blank" data-answer="en" size="2" /> vigtig del <input type="text" class="blank" data-answer="af" size="2" /> den danske kost. <button class="speak-btn" data-text="Gennem 1700-tallet blev kartoffelproduktionen i Danmark stadig mere udbredt, og kartoflerne blev en vigtig del af den danske kost." title="Afspil sætning" disabled>🔊</button></span> <span>I begyndelsen var det primært de øvre klasser, <input type="text" class="blank" data-answer="der" size="3" /> kunne tilgå disse nye fødevarer, men gradvist kom kartoffelkulturen også ind <input type="text" class="blank" data-answer="blandt" size="6" /> landbefolkningen. <button class="speak-btn" data-text="I begyndelsen var det primært de øvre klasser, der kunne tilgå disse nye fødevarer, men gradvist kom kartoffelkulturen også ind blandt landbefolkningen." title="Afspil sætning" disabled>🔊</button></span> <span>I 1800-tallet blev 'kartoffelferie' et populært tema i dansk kultur. <button class="speak-btn" data-text="I 1800-tallet blev 'kartoffelferie' et populært tema i dansk kultur." title="Afspil sætning" disabled>🔊</button></span> <span>I denne periode begyndte man at bruge kartoflerne til <input type="text" class="blank" data-answer="en" size="2" /> række forskellige retter, såsom stegte <input type="text" class="blank" data-answer="og" size="2" /> bagte kartofler, kartoffelkager <input type="text" class="blank" data-answer="og" size="2" /> kartoffelsuppe. <button class="speak-btn" data-text="I denne periode begyndte man at bruge kartoflerne til en række forskellige retter, såsom stegte og bagte kartofler, kartoffelkager og kartoffelsuppe." title="Afspil sætning" disabled>🔊</button></span> <span>I 1900-tallet fortsatte 'kartoffelferie' sin udvikling i Danmark. <button class="speak-btn" data-text="I 1900-tallet fortsatte 'kartoffelferie' sin udvikling i Danmark." title="Afspil sætning" disabled>🔊</button></span> <span>I denne periode begyndte man at bruge kartoflerne til <input type="text" class="blank" data-answer="en" size="2" /> række forskellige retter, såsom kartoffelpølse, kartoffelgratin <input type="text" class="blank" data-answer="og" size="2" /> kartoffelsalat. <button class="speak-btn" data-text="I denne periode begyndte man at bruge kartoflerne til en række forskellige retter, såsom kartoffelpølse, kartoffelgratin og kartoffelsalat." title="Afspil sætning" disabled>🔊</button></span> <span>I dag er 'kartoffelferie' stadig et populært tema i dansk kultur. <button class="speak-btn" data-text="I dag er 'kartoffelferie' stadig et populært tema i dansk kultur." title="Afspil sætning" disabled>🔊</button></span> <span>I Danmark kan du finde mange forskellige retter med kartofler som hovedingrediens, fra traditionelle danske retter til moderne fusionretter. <button class="speak-btn" data-text="I Danmark kan du finde mange forskellige retter med kartofler som hovedingrediens, fra traditionelle danske retter til moderne fusionretter." title="Afspil sætning" disabled>🔊</button></span> <span>Kartoffelkulturen har haft <input type="text" class="blank" data-answer="en" size="2" /> stor betydning for den danske kost <input type="text" class="blank" data-answer="og" size="2" /> kulturarv. <button class="speak-btn" data-text="Kartoffelkulturen har haft en stor betydning for den danske kost og kulturarv." title="Afspil sætning" disabled>🔊</button></span> <span>'Kartoffelferie' er et populært tema i dansk kultur, <input type="text" class="blank" data-answer="der" size="3" /> fortsat inspirerer nye generationer <input type="text" class="blank" data-answer="af" size="2" /> kokke <input type="text" class="blank" data-answer="og" size="2" /> madentusiaster. <button class="speak-btn" data-text="'Kartoffelferie' er et populært tema i dansk kultur, der fortsat inspirerer nye generationer af kokke og madentusiaster." title="Afspil sætning" disabled>🔊</button></span> <span>Afslutningsvis kan man konkludere, at 'kartoffelferie' har <input type="text" class="blank" data-answer="en" size="2" /> lang tradition i Danmark <input type="text" class="blank" data-answer="og" size="2" /> er et vigtigt element i den danske kulturarv. <button class="speak-btn" data-text="Afslutningsvis kan man konkludere, at 'kartoffelferie' har en lang tradition i Danmark og er et vigtigt element i den danske kulturarv." title="Afspil sætning" disabled>🔊</button></span> <span>Gennem århundrederne har kartoflerne været <input type="text" class="blank" data-answer="en" size="2" /> vigtig del <input type="text" class="blank" data-answer="af" size="2" /> den danske kost <input type="text" class="blank" data-answer="og" size="2" /> kultur, <input type="text" class="blank" data-answer="og" size="2" /> fortsat inspirerer de nye generationer til at skabe innovative retter med disse fantastiske kulinariske produkter. <button class="speak-btn" data-text="Gennem århundrederne har kartoflerne været en vigtig del af den danske kost og kultur, og fortsat inspirerer de nye generationer til at skabe innovative retter med disse fantastiske kulinariske produkter." title="Afspil sætning" disabled>🔊</button></span></p>
+        <button onclick="checkAnswers()">Tjek svar</button>
+        <button onclick="showAnswers()">Vis ord, der blev fjernet</button>
+        <div id="answers"><strong>Ord til udfyldning:</strong> <strong>blandt</strong>, <strong>en</strong>, <strong>der</strong>, <strong>af</strong>, <strong>og</strong></div>
+
+        <label for="rate">Hastighed (speed): <span id="rateValue">1.0</span></label>
+        <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+
+        <script>
+            function checkAnswers() {
+                let inputs = document.querySelectorAll('input.blank');
+                let allCorrect = true;
+                inputs.forEach(input => {
+                    let answer = input.dataset.answer.toLowerCase();
+                    let user = input.value.trim().toLowerCase();
+                    if(user === answer) {
+                        input.classList.add('correct');
+                        input.classList.remove('incorrect');
+                    } else {
+                        input.classList.add('incorrect');
+                        input.classList.remove('correct');
+                        allCorrect = false;
+                    }
+                });
+                document.querySelectorAll('.speak-btn').forEach(btn => {
+                    btn.disabled = !allCorrect;
+                });
+            }
+
+            function showAnswers() {
+                document.getElementById('answers').style.display = 'block';
+            }
+
+            function speak(text) {
+                if (!('speechSynthesis' in window)) {
+                    alert("Din browser understøtter ikke tale-syntese.");
+                    return;
+                }
+                const rateInput = document.getElementById('rate');
+                const rate = parseFloat(rateInput.value);
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'da-DK';
+                utterance.rate = rate;
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(utterance);
+            }
+
+            document.getElementById('rate').addEventListener('input', function() {
+                document.getElementById('rateValue').textContent = this.value;
+            });
+
+            document.querySelectorAll('.speak-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const text = button.dataset.text;
+                    speak(text);
+                });
+            });        
+        </script>
+    </body>
+    </html>
+    

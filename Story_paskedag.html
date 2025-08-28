@@ -1,0 +1,82 @@
+
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            input.blank { font-size: 1em; padding: 2px 5px; margin: 0 2px; border: 2px solid #ccc; border-radius: 4px; }
+            input.correct { border-color: green; background-color: #d4ffd4; }
+            input.incorrect { border-color: red; background-color: #ffd4d4; }
+            button { margin-top: 20px; font-size: 1em; padding: 10px 20px; margin-right: 10px; cursor: pointer; }
+            .speak-btn { font-size: 1em; padding: 2px 6px; margin-left: 5px; }
+            .speak-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+            #answers { margin-top: 15px; font-style: italic; display: none; }
+            span { display: block; margin-bottom: 10px; }
+            label { display: block; margin-top: 20px; font-weight: bold; }
+            input[type=range] { width: 200px; margin-top: 5px; }
+            #rateValue { font-weight: normal; margin-left: 10px; }
+        </style>
+    </head>
+    <body>
+        <p><span>Påskedag er en traditionel danske helligdag, der i dag markerer begyndelsen på den kristne påskefest. <button class="speak-btn" data-text="Påskedag er en traditionel danske helligdag, der i dag markerer begyndelsen på den kristne påskefest." title="Afspil sætning" disabled>🔊</button></span> <span>Men hvor kommer denne tradition fra? <button class="speak-btn" data-text="Men hvor kommer denne tradition fra?" title="Afspil sætning" disabled>🔊</button></span> <span>For at forstå dette skal vi tage et spring tilbage i tid <input type="text" class="blank" data-answer="og" size="2" /> se på de gamle germanske traditioner. <button class="speak-btn" data-text="For at forstå dette skal vi tage et spring tilbage i tid og se på de gamle germanske traditioner." title="Afspil sætning" disabled>🔊</button></span> <span>I oldtiden var det en almindelig praksis <input type="text" class="blank" data-answer="blandt" size="6" /> germanerne, der bosatte sig i Danmark, at fejre vinterens ende med stor festlighed. <button class="speak-btn" data-text="I oldtiden var det en almindelig praksis blandt germanerne, der bosatte sig i Danmark, at fejre vinterens ende med stor festlighed." title="Afspil sætning" disabled>🔊</button></span> <span>De mente, at solen <input type="text" class="blank" data-answer="havde" size="5" /> dødd under jorden <input type="text" class="blank" data-answer="og" size="2" /> nu vendte tilbage <input type="text" class="blank" data-answer="til" size="3" /> livet. <button class="speak-btn" data-text="De mente, at solen havde dødd under jorden og nu vendte tilbage til livet." title="Afspil sætning" disabled>🔊</button></span> <span>Dette blev markeret ved en stor brandfest på et højdedrag eller en markplads. <button class="speak-btn" data-text="Dette blev markeret ved en stor brandfest på et højdedrag eller en markplads." title="Afspil sætning" disabled>🔊</button></span> <span>Da kristendommen kom <input type="text" class="blank" data-answer="til" size="3" /> Danmark i 10.- <input type="text" class="blank" data-answer="og" size="2" /> 11. <button class="speak-btn" data-text="Da kristendommen kom til Danmark i 10.- og 11." title="Afspil sætning" disabled>🔊</button></span> <span>århundrede, begyndte man at overføre disse traditioner <input type="text" class="blank" data-answer="til" size="3" /> de nye kristne helligdage. <button class="speak-btn" data-text="århundrede, begyndte man at overføre disse traditioner til de nye kristne helligdage." title="Afspil sætning" disabled>🔊</button></span> <span>Således blev påskedagen valgt som den dag, hvor Jesus Kristus steg op fra døde igen. <button class="speak-btn" data-text="Således blev påskedagen valgt som den dag, hvor Jesus Kristus steg op fra døde igen." title="Afspil sætning" disabled>🔊</button></span> <span>I middelalderen var påskedag en stor festdag i Danmark, <input type="text" class="blank" data-answer="og" size="2" /> man fejrede med store brandfester, dans <input type="text" class="blank" data-answer="og" size="2" /> mad. <button class="speak-btn" data-text="I middelalderen var påskedag en stor festdag i Danmark, og man fejrede med store brandfester, dans og mad." title="Afspil sætning" disabled>🔊</button></span> <span>Men under reformationen i 16.- århundrede blev disse traditioner mere eller mindre forkastet af de protestantiske reformatorer. <button class="speak-btn" data-text="Men under reformationen i 16.- århundrede blev disse traditioner mere eller mindre forkastet af de protestantiske reformatorer." title="Afspil sætning" disabled>🔊</button></span> <span>I moderne tid <input type="text" class="blank" data-answer="har" size="3" /> påskedagen igen opnået sin popularitet som en traditionsrig helligdag i Danmark. <button class="speak-btn" data-text="I moderne tid har påskedagen igen opnået sin popularitet som en traditionsrig helligdag i Danmark." title="Afspil sætning" disabled>🔊</button></span> <span>Man fejrer med familie <input type="text" class="blank" data-answer="og" size="2" /> venner, spiser påskeæg <input type="text" class="blank" data-answer="og" size="2" /> -kager, <input type="text" class="blank" data-answer="og" size="2" /> går på tur eller <input type="text" class="blank" data-answer="til" size="3" /> kirken for at ære Jesus Kristus' opstandelse. <button class="speak-btn" data-text="Man fejrer med familie og venner, spiser påskeæg og -kager, og går på tur eller til kirken for at ære Jesus Kristus' opstandelse." title="Afspil sætning" disabled>🔊</button></span> <span>I dag er påskedagen en af de mest populære helligdage i Danmark, hvor man kan opleve store brandfester, markeder <input type="text" class="blank" data-answer="og" size="2" /> andre traditionelle aktiviteter. <button class="speak-btn" data-text="I dag er påskedagen en af de mest populære helligdage i Danmark, hvor man kan opleve store brandfester, markeder og andre traditionelle aktiviteter." title="Afspil sætning" disabled>🔊</button></span> <span><input type="text" class="blank" data-answer="og" size="2" /> selv om vi ikke længere fejrer vinterens ende med stor festlighed som tidligere, er påskedagen stadig en dag <input type="text" class="blank" data-answer="til" size="3" /> at fejre livet <input type="text" class="blank" data-answer="og" size="2" /> dens triumf over døden. <button class="speak-btn" data-text="Og selv om vi ikke længere fejrer vinterens ende med stor festlighed som tidligere, er påskedagen stadig en dag til at fejre livet og dens triumf over døden." title="Afspil sætning" disabled>🔊</button></span> <span>Afslutningsvis kan man sige, at påskedag i Danmark <input type="text" class="blank" data-answer="har" size="3" /> udviklet sig fra en oldtidsfest <input type="text" class="blank" data-answer="til" size="3" /> en moderne helligdag med kristne rødder. <button class="speak-btn" data-text="Afslutningsvis kan man sige, at påskedag i Danmark har udviklet sig fra en oldtidsfest til en moderne helligdag med kristne rødder." title="Afspil sætning" disabled>🔊</button></span> <span>Men trods ændringerne gennem tiden er traditionen omkring denne dag stadig levende <input type="text" class="blank" data-answer="og" size="2" /> populær <input type="text" class="blank" data-answer="blandt" size="6" /> danskerne. <button class="speak-btn" data-text="Men trods ændringerne gennem tiden er traditionen omkring denne dag stadig levende og populær blandt danskerne." title="Afspil sætning" disabled>🔊</button></span> <span>Længde: 176 ord. <button class="speak-btn" data-text="Længde: 176 ord." title="Afspil sætning" disabled>🔊</button></span> <span>Struktur: Begyndelse - oldtidens fejringer, Midte - kristendommens indførelse i Danmark, Afslutning - moderne tid <input type="text" class="blank" data-answer="og" size="2" /> traditionen omkring påskedagen. <button class="speak-btn" data-text="Struktur: Begyndelse - oldtidens fejringer, Midte - kristendommens indførelse i Danmark, Afslutning - moderne tid og traditionen omkring påskedagen." title="Afspil sætning" disabled>🔊</button></span> <span>Flydende fortælling med tydelig sammenhæng mellem de forskellige afsnit. <button class="speak-btn" data-text="Flydende fortælling med tydelig sammenhæng mellem de forskellige afsnit." title="Afspil sætning" disabled>🔊</button></span></p>
+        <button onclick="checkAnswers()">Tjek svar</button>
+        <button onclick="showAnswers()">Vis ord, der blev fjernet</button>
+        <div id="answers"><strong>Ord til udfyldning:</strong> <strong>havde</strong>, <strong>har</strong>, <strong>blandt</strong>, <strong>og</strong>, <strong>til</strong></div>
+
+        <label for="rate">Hastighed (speed): <span id="rateValue">1.0</span></label>
+        <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+
+        <script>
+            function checkAnswers() {
+                let inputs = document.querySelectorAll('input.blank');
+                let allCorrect = true;
+                inputs.forEach(input => {
+                    let answer = input.dataset.answer.toLowerCase();
+                    let user = input.value.trim().toLowerCase();
+                    if(user === answer) {
+                        input.classList.add('correct');
+                        input.classList.remove('incorrect');
+                    } else {
+                        input.classList.add('incorrect');
+                        input.classList.remove('correct');
+                        allCorrect = false;
+                    }
+                });
+                document.querySelectorAll('.speak-btn').forEach(btn => {
+                    btn.disabled = !allCorrect;
+                });
+            }
+
+            function showAnswers() {
+                document.getElementById('answers').style.display = 'block';
+            }
+
+            function speak(text) {
+                if (!('speechSynthesis' in window)) {
+                    alert("Din browser understøtter ikke tale-syntese.");
+                    return;
+                }
+                const rateInput = document.getElementById('rate');
+                const rate = parseFloat(rateInput.value);
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'da-DK';
+                utterance.rate = rate;
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(utterance);
+            }
+
+            document.getElementById('rate').addEventListener('input', function() {
+                document.getElementById('rateValue').textContent = this.value;
+            });
+
+            document.querySelectorAll('.speak-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const text = button.dataset.text;
+                    speak(text);
+                });
+            });        
+        </script>
+    </body>
+    </html>
+    

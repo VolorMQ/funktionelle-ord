@@ -1,0 +1,82 @@
+
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            input.blank { font-size: 1em; padding: 2px 5px; margin: 0 2px; border: 2px solid #ccc; border-radius: 4px; }
+            input.correct { border-color: green; background-color: #d4ffd4; }
+            input.incorrect { border-color: red; background-color: #ffd4d4; }
+            button { margin-top: 20px; font-size: 1em; padding: 10px 20px; margin-right: 10px; cursor: pointer; }
+            .speak-btn { font-size: 1em; padding: 2px 6px; margin-left: 5px; }
+            .speak-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+            #answers { margin-top: 15px; font-style: italic; display: none; }
+            span { display: block; margin-bottom: 10px; }
+            label { display: block; margin-top: 20px; font-weight: bold; }
+            input[type=range] { width: 200px; margin-top: 5px; }
+            #rateValue { font-weight: normal; margin-left: 10px; }
+        </style>
+    </head>
+    <body>
+        <p><span>Nytår er en traditionel danske festdag, der fejres <input type="text" class="blank" data-answer="den" size="3" /> 31. <button class="speak-btn" data-text="Nytår er en traditionel danske festdag, der fejres den 31." title="Afspil sætning" disabled>🔊</button></span> <span>december og markerer overgangen fra det foregående år til det nye. <button class="speak-btn" data-text="december og markerer overgangen fra det foregående år til det nye." title="Afspil sætning" disabled>🔊</button></span> <span>Historien om nytår har rødder i oldtiden, hvor romerne fejrede jul med gaver, mad og drikke. <button class="speak-btn" data-text="Historien om nytår har rødder i oldtiden, hvor romerne fejrede jul med gaver, mad og drikke." title="Afspil sætning" disabled>🔊</button></span> <span>I middelalderen <input type="text" class="blank" data-answer="blev" size="4" /> julefejreren indført i Danmark af kristendommen som en tid for at reflektere over det foregående år og se frem til det nye. <button class="speak-btn" data-text="I middelalderen blev julefejreren indført i Danmark af kristendommen som en tid for at reflektere over det foregående år og se frem til det nye." title="Afspil sætning" disabled>🔊</button></span> <span>Men allerede i 1600-tallet begyndte man at fejre nytår med mere festlig tone, især blandt adelen. <button class="speak-btn" data-text="Men allerede i 1600-tallet begyndte man at fejre nytår med mere festlig tone, især blandt adelen." title="Afspil sætning" disabled>🔊</button></span> <span>I 1800-tallet <input type="text" class="blank" data-answer="blev" size="4" /> nytår-fejrerne stadig mer populære, og <input type="text" class="blank" data-answer="den" size="3" /> 31. <button class="speak-btn" data-text="I 1800-tallet blev nytår-fejrerne stadig mer populære, og den 31." title="Afspil sætning" disabled>🔊</button></span> <span>december <input type="text" class="blank" data-answer="blev" size="4" /> en tid for store fester og udflyttninger til teater, koncert og dans. <button class="speak-btn" data-text="december blev en tid for store fester og udflyttninger til teater, koncert og dans." title="Afspil sætning" disabled>🔊</button></span> <span>I denne periode opstod også traditionen om at give gaver på nyårsdag. <button class="speak-btn" data-text="I denne periode opstod også traditionen om at give gaver på nyårsdag." title="Afspil sætning" disabled>🔊</button></span> <span>I 1900-tallet fortsatte nytår-fejrerne med at blive mere populære, og i dag er det en af <input type="text" class="blank" data-answer="de" size="2" /> mest fejrede dage i Danmark. <button class="speak-btn" data-text="I 1900-tallet fortsatte nytår-fejrerne med at blive mere populære, og i dag er det en af de mest fejrede dage i Danmark." title="Afspil sætning" disabled>🔊</button></span> <span>Mange danskere begynder allerede flere uger før at forberede <input type="text" class="blank" data-answer="sig" size="3" /> på nyårsfesten, hvilket kan indebare alt fra indkøb af gaver til planlægning af festplaner. <button class="speak-btn" data-text="Mange danskere begynder allerede flere uger før at forberede sig på nyårsfesten, hvilket kan indebare alt fra indkøb af gaver til planlægning af festplaner." title="Afspil sætning" disabled>🔊</button></span> <span>På nyttårseftermiddagen er det traditionelt at samles med familie og venner omkring en stor middag, hvor der serveres mad og drikke. <button class="speak-btn" data-text="På nyttårseftermiddagen er det traditionelt at samles med familie og venner omkring en stor middag, hvor der serveres mad og drikke." title="Afspil sætning" disabled>🔊</button></span> <span>Efter middagen kan man fortsætte med at fejre på andre måder, som f.eks. <button class="speak-btn" data-text="Efter middagen kan man fortsætte med at fejre på andre måder, som f.eks." title="Afspil sætning" disabled>🔊</button></span> <span>ved at se film <input type="text" class="blank" data-answer="eller" size="5" /> spille spill. <button class="speak-btn" data-text="ved at se film eller spille spill." title="Afspil sætning" disabled>🔊</button></span> <span>I dag er nytår-fejrerne i Danmark et stort arrangement, hvor mange danskere deltager i store fester og udflyttninger til byer og landsbyer over hele landet. <button class="speak-btn" data-text="I dag er nytår-fejrerne i Danmark et stort arrangement, hvor mange danskere deltager i store fester og udflyttninger til byer og landsbyer over hele landet." title="Afspil sætning" disabled>🔊</button></span> <span>Det er en tid for at samles med andre, fejre det nye år og se frem mod <input type="text" class="blank" data-answer="de" size="2" /> kommende måneder. <button class="speak-btn" data-text="Det er en tid for at samles med andre, fejre det nye år og se frem mod de kommende måneder." title="Afspil sætning" disabled>🔊</button></span> <span>I afslutningen på denne historie kan man konkludere, at nytår-fejrerne i Danmark har udviklet <input type="text" class="blank" data-answer="sig" size="3" /> fra en traditionel julefejr til en stor festdag, hvor mange danskere deltager. <button class="speak-btn" data-text="I afslutningen på denne historie kan man konkludere, at nytår-fejrerne i Danmark har udviklet sig fra en traditionel julefejr til en stor festdag, hvor mange danskere deltager." title="Afspil sætning" disabled>🔊</button></span> <span>Det er en tid for at fejre det nye år og se frem mod <input type="text" class="blank" data-answer="de" size="2" /> kommende måneder. <button class="speak-btn" data-text="Det er en tid for at fejre det nye år og se frem mod de kommende måneder." title="Afspil sætning" disabled>🔊</button></span></p>
+        <button onclick="checkAnswers()">Tjek svar</button>
+        <button onclick="showAnswers()">Vis ord, der blev fjernet</button>
+        <div id="answers"><strong>Ord til udfyldning:</strong> <strong>sig</strong>, <strong>de</strong>, <strong>eller</strong>, <strong>blev</strong>, <strong>den</strong></div>
+
+        <label for="rate">Hastighed (speed): <span id="rateValue">1.0</span></label>
+        <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+
+        <script>
+            function checkAnswers() {
+                let inputs = document.querySelectorAll('input.blank');
+                let allCorrect = true;
+                inputs.forEach(input => {
+                    let answer = input.dataset.answer.toLowerCase();
+                    let user = input.value.trim().toLowerCase();
+                    if(user === answer) {
+                        input.classList.add('correct');
+                        input.classList.remove('incorrect');
+                    } else {
+                        input.classList.add('incorrect');
+                        input.classList.remove('correct');
+                        allCorrect = false;
+                    }
+                });
+                document.querySelectorAll('.speak-btn').forEach(btn => {
+                    btn.disabled = !allCorrect;
+                });
+            }
+
+            function showAnswers() {
+                document.getElementById('answers').style.display = 'block';
+            }
+
+            function speak(text) {
+                if (!('speechSynthesis' in window)) {
+                    alert("Din browser understøtter ikke tale-syntese.");
+                    return;
+                }
+                const rateInput = document.getElementById('rate');
+                const rate = parseFloat(rateInput.value);
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'da-DK';
+                utterance.rate = rate;
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(utterance);
+            }
+
+            document.getElementById('rate').addEventListener('input', function() {
+                document.getElementById('rateValue').textContent = this.value;
+            });
+
+            document.querySelectorAll('.speak-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const text = button.dataset.text;
+                    speak(text);
+                });
+            });        
+        </script>
+    </body>
+    </html>
+    

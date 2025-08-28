@@ -1,0 +1,84 @@
+
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            input.blank { font-size: 1em; padding: 2px 5px; margin: 0 2px; border: 2px solid #ccc; border-radius: 4px; }
+            input.correct { border-color: green; background-color: #d4ffd4; }
+            input.incorrect { border-color: red; background-color: #ffd4d4; }
+            button { margin-top: 20px; font-size: 1em; padding: 10px 20px; margin-right: 10px; cursor: pointer; }
+            .speak-btn { font-size: 1em; padding: 2px 6px; margin-left: 5px; }
+            .speak-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+            #answers { margin-top: 15px; font-style: italic; display: none; }
+            span { display: block; margin-bottom: 10px; }
+            label { display: block; margin-top: 20px; font-weight: bold; }
+            input[type=range] { width: 200px; margin-top: 5px; }
+            #rateValue { font-weight: normal; margin-left: 10px; }
+        </style>
+    </head>
+    <body>
+        <p><span>Hej Camilla,
+Jeg har lige læst en bog, <input type="text" class="blank" data-answer="der" size="3" /> har gjort stor indtryk <input type="text" class="blank" data-answer="på" size="2" /> mig. <button class="speak-btn" data-text="Hej Camilla,
+Jeg har lige læst en bog, der har gjort stor indtryk på mig." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg havde aldrig tænkt over, hvorfor vi taler dansk og ikke <input type="text" class="blank" data-answer="noget" size="5" /> andet sprog, men denne bog har åbnet mine øjne for en række interessante fakta. <button class="speak-btn" data-text="Jeg havde aldrig tænkt over, hvorfor vi taler dansk og ikke noget andet sprog, men denne bog har åbnet mine øjne for en række interessante fakta." title="Afspil sætning" disabled>🔊</button></span> <span>Bogen fortæller om, hvordan det danske sprog er udviklet gennem tusinder af år. <button class="speak-btn" data-text="Bogen fortæller om, hvordan det danske sprog er udviklet gennem tusinder af år." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg <input type="text" class="blank" data-answer="var" size="3" /> specielt fascineret over, hvorledes ord og vendinger fra andre sprogsammenhænge har påvirket <input type="text" class="blank" data-answer="vores" size="5" /> eget sprog. <button class="speak-btn" data-text="Jeg var specielt fascineret over, hvorledes ord og vendinger fra andre sprogsammenhænge har påvirket vores eget sprog." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg fandt også en del interessante sammenligninger mellem dansk og andre europæiske sprog. <button class="speak-btn" data-text="Jeg fandt også en del interessante sammenligninger mellem dansk og andre europæiske sprog." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg vil gerne dele mine tanker med dig om bogen, for jeg ved, at du er så interesseret i historie og kultur som mig selv. <button class="speak-btn" data-text="Jeg vil gerne dele mine tanker med dig om bogen, for jeg ved, at du er så interesseret i historie og kultur som mig selv." title="Afspil sætning" disabled>🔊</button></span> <span>Vi kan mødes til kaffe og diskutere bogens indhold. <button class="speak-btn" data-text="Vi kan mødes til kaffe og diskutere bogens indhold." title="Afspil sætning" disabled>🔊</button></span> <span>Jeg håber, du har tid til det! <button class="speak-btn" data-text="Jeg håber, du har tid til det!" title="Afspil sætning" disabled>🔊</button></span> <span>Med venlig hilsen, <button class="speak-btn" data-text="Med venlig hilsen," title="Afspil sætning" disabled>🔊</button></span></p>
+        <button onclick="checkAnswers()">Tjek svar</button>
+        <button onclick="showAnswers()">Vis ord, der blev fjernet</button>
+        <div id="answers"><strong>Ord til udfyldning:</strong> <strong>der</strong>, <strong>var</strong>, <strong>vores</strong>, <strong>på</strong>, <strong>noget</strong></div>
+
+        <label for="rate">Hastighed (speed): <span id="rateValue">1.0</span></label>
+        <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+
+        <script>
+            function checkAnswers() {
+                let inputs = document.querySelectorAll('input.blank');
+                let allCorrect = true;
+                inputs.forEach(input => {
+                    let answer = input.dataset.answer.toLowerCase();
+                    let user = input.value.trim().toLowerCase();
+                    if(user === answer) {
+                        input.classList.add('correct');
+                        input.classList.remove('incorrect');
+                    } else {
+                        input.classList.add('incorrect');
+                        input.classList.remove('correct');
+                        allCorrect = false;
+                    }
+                });
+                document.querySelectorAll('.speak-btn').forEach(btn => {
+                    btn.disabled = !allCorrect;
+                });
+            }
+
+            function showAnswers() {
+                document.getElementById('answers').style.display = 'block';
+            }
+
+            function speak(text) {
+                if (!('speechSynthesis' in window)) {
+                    alert("Din browser understøtter ikke tale-syntese.");
+                    return;
+                }
+                const rateInput = document.getElementById('rate');
+                const rate = parseFloat(rateInput.value);
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'da-DK';
+                utterance.rate = rate;
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(utterance);
+            }
+
+            document.getElementById('rate').addEventListener('input', function() {
+                document.getElementById('rateValue').textContent = this.value;
+            });
+
+            document.querySelectorAll('.speak-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const text = button.dataset.text;
+                    speak(text);
+                });
+            });        
+        </script>
+    </body>
+    </html>
+    
